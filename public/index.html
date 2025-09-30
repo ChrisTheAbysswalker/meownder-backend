@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meownder API - Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-purple-50 to-pink-50 min-h-screen">
+    <div x-data="meownderApp()" x-cloak class="container mx-auto px-4 py-8 max-w-6xl">
+
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <div class="inline-block bg-white rounded-full p-4 shadow-lg mb-4">
+                <span class="text-6xl">😺</span>
+            </div>
+            <h1 class="text-5xl font-bold text-purple-900 mb-2">Meownder API</h1>
+            <p class="text-xl text-purple-600">El Tinder de Gatos - API Documentation</p>
+            <p class="text-sm text-gray-500 mt-2">Version 2.0.0</p>
+        </header>
+
+        <!-- Tabs -->
+        <div class="mb-8">
+            <div class="flex flex-wrap gap-2 justify-center">
+                <button @click="activeTab = 'docs'"
+                    :class="activeTab === 'docs' ? 'bg-purple-600 text-white' : 'bg-white text-purple-600'"
+                    class="px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition">
+                    📖 Documentación
+                </button>
+                <button @click="activeTab = 'profiles'"
+                    :class="activeTab === 'profiles' ? 'bg-purple-600 text-white' : 'bg-white text-purple-600'"
+                    class="px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition">
+                    🐱 Ver Perfiles
+                </button>
+                <button @click="activeTab = 'test'"
+                    :class="activeTab === 'test' ? 'bg-purple-600 text-white' : 'bg-white text-purple-600'"
+                    class="px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition">
+                    🧪 Probar API
+                </button>
+            </div>
+        </div>
+
+        <!-- Documentation Tab -->
+        <div x-show="activeTab === 'docs'" class="space-y-6">
+
+            <!-- Endpoints -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-purple-900 mb-6 flex items-center gap-2">
+                    <span>🔌</span> Endpoints Disponibles
+                </h2>
+
+                <div class="space-y-4">
+                    <!-- GET /profiles -->
+                    <div class="border-l-4 border-green-500 pl-4 py-2 bg-green-50 rounded">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="bg-green-600 text-white px-3 py-1 rounded text-sm font-bold">GET</span>
+                            <code class="text-lg font-mono text-gray-800">/api/profiles</code>
+                        </div>
+                        <p class="text-gray-600">Obtener todos los perfiles de gatos con datos completos</p>
+                    </div>
+
+                    <!-- GET /profiles/:id -->
+                    <div class="border-l-4 border-green-500 pl-4 py-2 bg-green-50 rounded">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="bg-green-600 text-white px-3 py-1 rounded text-sm font-bold">GET</span>
+                            <code class="text-lg font-mono text-gray-800">/api/profiles/:id</code>
+                        </div>
+                        <p class="text-gray-600">Obtener perfil específico por ID</p>
+                    </div>
+
+                    <!-- POST /profiles/refresh -->
+                    <div class="border-l-4 border-blue-500 pl-4 py-2 bg-blue-50 rounded">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded text-sm font-bold">POST</span>
+                            <code class="text-lg font-mono text-gray-800">/api/profiles/refresh</code>
+                        </div>
+                        <p class="text-gray-600">Refrescar imágenes de todos los perfiles</p>
+                    </div>
+
+                    <!-- GET /cats -->
+                    <div class="border-l-4 border-yellow-500 pl-4 py-2 bg-yellow-50 rounded">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="bg-yellow-600 text-white px-3 py-1 rounded text-sm font-bold">GET</span>
+                            <code class="text-lg font-mono text-gray-800">/api/cats?count=5</code>
+                        </div>
+                        <p class="text-gray-600">Obtener lote de imágenes de gatos (legacy)</p>
+                    </div>
+
+                    <!-- GET /health -->
+                    <div class="border-l-4 border-green-500 pl-4 py-2 bg-green-50 rounded">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="bg-green-600 text-white px-3 py-1 rounded text-sm font-bold">GET</span>
+                            <code class="text-lg font-mono text-gray-800">/api/health</code>
+                        </div>
+                        <p class="text-gray-600">Health check del servicio</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Examples -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-purple-900 mb-6 flex items-center gap-2">
+                    <span>💡</span> Ejemplos de Uso
+                </h2>
+
+                <div class="space-y-4">
+                    <div class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <div class="mb-2 text-gray-400"># Obtener todos los perfiles</div>
+                        <div>curl <span x-text="baseUrl"></span>/profiles</div>
+                    </div>
+
+                    <div class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <div class="mb-2 text-gray-400"># Obtener perfil específico</div>
+                        <div>curl <span x-text="baseUrl"></span>/profiles/1</div>
+                    </div>
+
+                    <div class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <div class="mb-2 text-gray-400"># Refrescar imágenes</div>
+                        <div>curl -X POST <span x-text="baseUrl"></span>/profiles/refresh</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profiles Tab -->
+        <div x-show="activeTab === 'profiles'" class="space-y-6">
+
+            <!-- Loading -->
+            <div x-show="loading" class="text-center py-12">
+                <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+                <p class="text-purple-600 mt-4">Cargando gatitos...</p>
+            </div>
+
+            <!-- Error -->
+            <div x-show="error" class="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
+                <p class="text-red-600 font-semibold" x-text="error"></p>
+            </div>
+
+            <!-- Profiles Grid -->
+            <div x-show="!loading && !error" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <template x-for="cat in profiles" :key="cat.id">
+                    <div
+                        class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1">
+                        <!-- Image -->
+                        <div class="relative h-64 bg-gray-200">
+                            <img :src="cat.img" :alt="cat.name" class="w-full h-full object-cover"
+                                @error="$event.target.src = 'https://via.placeholder.com/400x300?text=Cat+Image'">
+                            <div
+                                class="absolute top-2 right-2 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                <span x-text="cat.age"></span> años
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-purple-900 mb-1" x-text="cat.name"></h3>
+                            <p class="text-purple-600 text-sm mb-3" x-text="cat.breed"></p>
+
+                            <div class="mb-3">
+                                <span
+                                    class="inline-block bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                    <span x-text="cat.personality"></span>
+                                </span>
+                            </div>
+
+                            <p class="text-gray-600 text-sm mb-4" x-text="cat.bio"></p>
+
+                            <div class="border-t pt-3">
+                                <p class="text-xs text-gray-500 font-semibold mb-2">Hobbies:</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <template x-for="hobby in cat.hobbies" :key="hobby">
+                                        <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs"
+                                            x-text="hobby"></span>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <!-- Test API Tab -->
+        <div x-show="activeTab === 'test'" class="space-y-6">
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-purple-900 mb-6 flex items-center gap-2">
+                    <span>🧪</span> Probar Endpoints
+                </h2>
+
+                <!-- Test Buttons -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <button @click="testEndpoint('/api/profiles')"
+                        class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition">
+                        GET /api/profiles
+                    </button>
+
+                    <button @click="testEndpoint('/api/profiles/1')"
+                        class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition">
+                        GET /api/profiles/1
+                    </button>
+
+                    <button @click="testEndpoint('/api/health')"
+                        class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition">
+                        GET /api/health
+                    </button>
+
+                    <button @click="testRefresh()"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition">
+                        POST /api/profiles/refresh
+                    </button>
+                </div>
+
+                <!-- Response -->
+                <div x-show="testResult" class="bg-gray-900 text-green-400 p-6 rounded-lg overflow-x-auto">
+                    <pre class="text-sm" x-text="testResult"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 text-gray-600">
+            <p class="mb-2">Deployed on <span class="font-bold text-purple-600">Render</span></p>
+            <p class="text-sm">Made with 💜 by ChrisTheAbysswalker</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function meownderApp() {
+            return {
+                activeTab: 'docs',
+                profiles: [],
+                loading: false,
+                error: null,
+                testResult: null,
+                baseUrl: window.location.origin,
+
+                init() {
+                    // Auto-load profiles when switching to profiles tab
+                    this.$watch('activeTab', (value) => {
+                        if (value === 'profiles' && this.profiles.length === 0) {
+                            this.loadProfiles();
+                        }
+                    });
+                },
+
+                async loadProfiles() {
+                    this.loading = true;
+                    this.error = null;
+
+                    try {
+                        const response = await fetch(`${this.baseUrl}/api/profiles`);
+                        if (!response.ok) throw new Error('Error cargando perfiles');
+
+                        const data = await response.json();
+                        this.profiles = data.cats || [];
+                    } catch (err) {
+                        this.error = err.message;
+                    } finally {
+                        this.loading = false;
+                    }
+                },
+
+                async testEndpoint(endpoint) {
+                    try {
+                        const response = await fetch(`${this.baseUrl}${endpoint}`);
+                        const data = await response.json();
+                        this.testResult = JSON.stringify(data, null, 2);
+                    } catch (err) {
+                        this.testResult = `Error: ${err.message}`;
+                    }
+                },
+
+                async testRefresh() {
+                    try {
+                        const response = await fetch(`${this.baseUrl}/api/profiles/refresh`, {
+                            method: 'POST'
+                        });
+                        const data = await response.json();
+                        this.testResult = JSON.stringify(data, null, 2);
+
+                        // Reload profiles if we're on that tab
+                        if (this.activeTab === 'profiles') {
+                            setTimeout(() => this.loadProfiles(), 1000);
+                        }
+                    } catch (err) {
+                        this.testResult = `Error: ${err.message}`;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

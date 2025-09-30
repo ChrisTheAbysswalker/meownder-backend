@@ -1,0 +1,204 @@
+{
+    "cats": [
+        {
+            "id": 1,
+            "img": "",
+            "name": "Whiskers",
+            "age": 3,
+            "breed": "Persa",
+            "personality": "Juguetón y cariñoso",
+            "hobbies": ["Dormir al sol", "Cazar juguetes", "Ronronear"],
+            "bio": "Me encanta dormir 16 horas al día y juzgarte silenciosamente. Busco humano que me alimente a tiempo."
+        },
+        {
+            "id": 2,
+            "img": "",
+            "name": "Luna",
+            "age": 2,
+            "breed": "Siamés",
+            "personality": "Curiosa y vocal",
+            "hobbies": ["Maullar a las 3am", "Tirar cosas de la mesa", "Explorar"],
+            "bio": "Soy la reina de la casa y lo sé. Si buscas compañía vocal, soy tu match perfecto."
+        },
+        {
+            "id": 3,
+            "img": "",
+            "name": "Garfield",
+            "age": 5,
+            "breed": "Naranja Tabby",
+            "personality": "Relajado y glotón",
+            "hobbies": ["Comer", "Dormir", "Comer más"],
+            "bio": "Los lunes son mi enemigo. La lasaña es mi amor. Simple como eso. 🍝"
+        },
+        {
+            "id": 4,
+            "img": "",
+            "name": "Michi",
+            "age": 1,
+            "breed": "Callejero",
+            "personality": "Energético y travieso",
+            "hobbies": ["Parkour nocturno", "Atacar tobillos", "Esconderse en cajas"],
+            "bio": "Tengo la energía de mil soles. ¿Tu laptop? Ahora es mi cama. ¿Tu agua? Prefiero la del váter."
+        },
+        {
+            "id": 5,
+            "img": "",
+            "name": "Shadow",
+            "age": 4,
+            "breed": "Bombay",
+            "personality": "Misterioso y elegante",
+            "hobbies": ["Acechar en la oscuridad", "Aparecer de la nada", "Ser dramático"],
+            "bio": "Soy la noche, soy el misterio. También me gusta que me rasques detrás de las orejas."
+        },
+        {
+            "id": 6,
+            "img": "",
+            "name": "Princess",
+            "age": 3,
+            "breed": "Ragdoll",
+            "personality": "Mimada y sofisticada",
+            "hobbies": ["Exigir atención", "Ignorarte después", "Selfies"],
+            "bio": "No es que sea difícil, es que tengo estándares. Mi comida debe estar a temperatura ambiente."
+        },
+        {
+            "id": 7,
+            "img": "",
+            "name": "Simba",
+            "age": 2,
+            "breed": "Maine Coon",
+            "personality": "Aventurero y valiente",
+            "hobbies": ["Cazar insectos", "Escalar cortinas", "Rugir (maullar fuerte)"],
+            "bio": "Nací para ser rey. De tu sofá, principalmente. Todo el reino ve la luz que toco."
+        },
+        {
+            "id": 8,
+            "img": "",
+            "name": "Nala",
+            "age": 4,
+            "breed": "Bengalí",
+            "personality": "Atlética y competitiva",
+            "hobbies": ["Saltar alto", "Correr sin razón", "Ganar"],
+            "bio": "Corro a las 2am porque puedo. Mis zoomies son legendarios. ¿Entrenar? Siempre lista."
+        },
+        {
+            "id": 9,
+            "img": "",
+            "name": "Mittens",
+            "age": 6,
+            "breed": "Tuxedo",
+            "personality": "Formal y educado",
+            "hobbies": ["Observar por la ventana", "Sentarme elegantemente", "Juzgar"],
+            "bio": "Vine vestido de smoking porque soy un profesional. Prefiero la alta sociedad y el atún premium."
+        },
+        {
+            "id": 10,
+            "img": "",
+            "name": "Pelusa",
+            "age": 7,
+            "breed": "Angora",
+            "personality": "Dulce y tranquila",
+            "hobbies": ["Ser cepillada", "Dejar pelo en tu ropa", "Ronronear"],
+            "bio": "Soy una nube con patas. Mi pelo está en todos lados y en ninguno a la vez. Disfruto de la vida simple."
+        },
+        {
+            "id": 11,
+            "img": "",
+            "name": "Tiger",
+            "age": 3,
+            "breed": "Tabby rayado",
+            "personality": "Cazador nato",
+            "hobbies": ["Perseguir puntos láser", "Cazar moscas", "Entrenar ninja"],
+            "bio": "Soy un depredador feroz... de 3kg. Ese punto rojo no se escapará de mí. Nunca."
+        },
+        {
+            "id": 12,
+            "img": "",
+            "name": "Cleo",
+            "age": 5,
+            "breed": "Esfinge",
+            "personality": "Intelectual y cálida",
+            "hobbies": ["Buscar fuentes de calor", "Filosofar", "Exigir suéteres"],
+            "bio": "No tengo pelo pero tengo mucho amor para dar. Y frío. Mucho frío. ¿Tienes una manta?"
+        },
+        {
+            "id": 13,
+            "img": "",
+            "name": "Felix",
+            "age": 4,
+            "breed": "British Shorthair",
+            "personality": "Independiente y digno",
+            "hobbies": ["Leer el periódico (sentarme encima)", "Tomar té (ver cómo tomas té)", "Ser británico"],
+            "bio": "Cheerio! Prefiero mi espacio personal pero acepto caricias programadas de 3-4pm. Gracias."
+        },
+        {
+            "id": 14,
+            "img": "",
+            "name": "Oreo",
+            "age": 2,
+            "breed": "Blanco y negro",
+            "personality": "Payaso y adorable",
+            "hobbies": ["Hacer tonterías", "Caerme con gracia", "Ser el centro de atención"],
+            "bio": "Soy mitad blanco, mitad negro, 100% caos. Mi especialidad: caerme y actuar como si fuera intencional."
+        },
+        {
+            "id": 15,
+            "img": "",
+            "name": "Manchas",
+            "age": 3,
+            "breed": "Carey",
+            "personality": "Temperamental y leal",
+            "hobbies": ["Cambiar de humor", "Ser impredecible", "Amarte a mi manera"],
+            "bio": "Tengo actitud de carey y no me disculpo. Un momento te amo, al siguiente... también, pero no lo sabrás."
+        },
+        {
+            "id": 16,
+            "img": "",
+            "name": "Paws",
+            "age": 1,
+            "breed": "Munchkin",
+            "personality": "Pequeño y feroz",
+            "hobbies": ["Robar calcetines", "Ser subestimado", "Demostrar mi poder"],
+            "bio": "Mis patas son cortas pero mis sueños son altos. También puedo alcanzar el counter, no me pruebes."
+        },
+        {
+            "id": 17,
+            "img": "",
+            "name": "Zeus",
+            "age": 6,
+            "breed": "Noruego de Bosque",
+            "personality": "Majestuoso y protector",
+            "hobbies": ["Vigilar el reino", "Posar fotogénicamente", "Ser épico"],
+            "bio": "Soy el guardián de esta casa. Grande, peludo, imponente. También me asustan los pepinos."
+        },
+        {
+            "id": 18,
+            "img": "",
+            "name": "Dulce",
+            "age": 8,
+            "breed": "Himalayo",
+            "personality": "Maternal y paciente",
+            "hobbies": ["Dar consejos", "Limpiar a otros", "Siestas largas"],
+            "bio": "Soy la abuela que todos necesitan. Sabia, amorosa y siempre con tiempo para un abrazo peludo."
+        },
+        {
+            "id": 19,
+            "img": "",
+            "name": "Rocket",
+            "age": 2,
+            "breed": "Abisinio",
+            "personality": "Hiperactivo y curioso",
+            "hobbies": ["Investigar TODO", "No parar nunca", "Preguntar por qué"],
+            "bio": "¿Qué es eso? ¿Y eso? ¿Y ESO? Mi curiosidad no tiene límites. Dormir es para débiles."
+        },
+        {
+            "id": 20,
+            "img": "",
+            "name": "Toby",
+            "age": 5,
+            "breed": "Scottish Fold",
+            "personality": "Adorable y fotogénico",
+            "hobbies": ["Sentarme como humano", "Ser viral en internet", "Derretir corazones"],
+            "bio": "Mis orejas dobladas son mi marca registrada. Nací para las redes sociales y para robarte el corazón. 📸"
+        }
+    ]
+}

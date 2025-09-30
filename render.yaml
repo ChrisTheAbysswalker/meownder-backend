@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: meownder-backend
+    env: go
+    buildCommand: go build -o bin/main .
+    startCommand: ./bin/main
+    envVars:
+      - key: GIN_MODE
+        value: release
